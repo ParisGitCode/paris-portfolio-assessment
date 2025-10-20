@@ -4,4 +4,13 @@ function setup() {
 
 function draw() {
   background(220);
+  
+  
+  let i = 0;
+  while(i<500){
+    r = random(20)
+    circle(50+r,i,i);
+    i+=10;
+  
+  }
 }
