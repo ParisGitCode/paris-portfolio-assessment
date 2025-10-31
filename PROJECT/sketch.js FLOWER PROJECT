@@ -1,0 +1,56 @@
+  // For my project, I wanted to create a flower where I could change the hue of the petals every time I clicked. This would be a little bit of a challege because I'm not entirely sure how to go beyond red, blue, yellow, black and white on p5.js. Here I'm creating a variable under the name petals. I picked this since it's an appropriate name that can be used throughout.
+
+var petals;
+
+function setup() {
+  createCanvas(400, 400);
+  petals = color(255, 0, 0);
+}
+  // Now I've edited the function called setup and added a starting colours for the petals. This will be red.
+
+
+function draw() {
+  background(240);
+  translate(200, 200);
+
+// // Then for the draw section, I positioned the flower I wanted to create in the center of the canvas.
+  // I did this by acknowledging that my canvas is 400 x 400, and so in order to place this in the center
+  // I would have to do 200 x 200.
+  
+  fill(petals);
+  ellipse(60, 0, 60, 70);   
+  ellipse(-60, 0, 60, 70); 
+  ellipse(30, 50, 60, 60);   
+  ellipse(-30, 50, 60, 60);  
+  ellipse(30, -50, 60, 60);  
+  ellipse(-30, -50, 60, 60); 
+
+  // Here I'm filling the petals and noting where they'll be.
+   //  I  read more about the ellipse tag on the P5js website as the
+ // positioning was something I was struggling with and it took me a while to understand.
+  // I think this would've been better done with a loop of some sort but I just couldn't get it to work,
+  // so I had to do it manually by placing every petal individually. Every ellipse position is taking into
+  // account that the middle point of the flower I'm trying to make is at the 200 x 200 position, but with
+  // all of them it was just a case of trial and error rather than math (which is why the flower does look
+  // a little off). I had to at least make sure the right and left were even, as well as the top and botton.
+
+  
+  fill(0, 0, 255); // This fills in the center of the flower to blue. This was just a style decision.
+  ellipse(0, 0, 100, 100); // The last two numbers changes the size of the middle petal. While the first two positions it. So 0 keeps it in the middle.
+}
+
+function mousePressed() {
+  petals = color(random(255), random(255), random(255));
+}
+// This function here just changes the hue, I managed to make it a random number.
+// A major issue I ran into was that I hadn't used the 'color' tag or the 'random' tag,
+// and this meant that I made it an array instead (0,0,255), and so the colours weren't changing.
+// I used the P5.js page to learn about the tags to use (specifially color()).
+
+// Ultimately I think it went pretty well, however the most time consuming part was the positioning of the petals.
+// I used a lot of trial and error which took up a lot of time and it would have been more convenient if I had
+// just looped it in a way, but I wasn't sure how to.
+// I had also originally had a larger flower size but decided to make it smaller so the ellipse thing would work.
+
+
+
