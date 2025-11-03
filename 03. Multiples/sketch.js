@@ -1,3 +1,6 @@
+/*
+  Commenting out the while loops so the draw function works.
+
 function setup() {
   createCanvas(400, 400);
 }
@@ -14,6 +17,8 @@ function draw() {
   
   }
 }
+
+*/
 
 // loops 
 let row = 19; 
@@ -39,13 +44,13 @@ function draw(){
       let y = pad+(i*sHeight)+(pad*i)+(sHeight/2);
       fill(rgba); 
       rect(x, y, sWidth, sHeight); 
-      //push();
-        //angleMode(DEGREES)
-        //translate(x, y);
-        //rotate(i*5); 
-        //rotate(millis() / 20 * PI / 2);
-        //rect(0, 0, sWidth, sHeight); 
-      //pop(); 
+      push();
+        angleMode(DEGREES)
+        translate(x, y);
+        rotate(i*5); 
+        rotate(millis() / 20 * PI / 2);
+        rect(0, 0, sWidth, sHeight); 
+      pop(); 
     }
   }
 }
