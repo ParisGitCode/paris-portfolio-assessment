@@ -28,29 +28,32 @@ let sWidth, sHeight;
 let rgba = [90, 180, 200, 255];     
 
 function setup() {
-    createCanvas(windowWidth, windowHeight);
-    sWidth = (width/col)-(pad+(pad/col));
-    sHeight = (height/row)-(pad+(pad/row));
-    rectMode(CENTER); 
-    noStroke();
+  createCanvas(windowWidth, windowHeight);
+  sWidth = (width / col) - (pad + pad / col);
+  sHeight = (height / row) - (pad + pad / row);
+  rectMode(CENTER); 
+  noStroke();
 }
 
-function draw(){
+function draw() {
   background(200); 
-  // Loop through Y values
-  for(let i=0; i<row; i++){
-    for(let ii=0; ii<col; ii++){
-      let x = pad+(ii*sWidth)+(pad*ii)+(sWidth/2);
-      let y = pad+(i*sHeight)+(pad*i)+(sHeight/2);
+
+  for (let i = 0; i < row; i++) {
+    for (let ii = 0; ii < col; ii++) {
+      let x = pad + (ii * sWidth) + (pad * ii) + (sWidth / 2);
+      let y = pad + (i * sHeight) + (pad * i) + (sHeight / 2);
+
       fill(rgba); 
       rect(x, y, sWidth, sHeight); 
+
       push();
-        angleMode(DEGREES)
-        translate(x, y);
-        rotate(i*5); 
-        rotate(millis() / 20 * PI / 2);
-        rect(0, 0, sWidth, sHeight); 
-      pop(); 
+      angleMode(DEGREES);
+      translate(x, y);
+      rotate(i * 5 + millis() / 50);
+      fill(255, 100);
+      rect(0, 0, sWidth, sHeight); 
+      pop();
     }
   }
 }
+
