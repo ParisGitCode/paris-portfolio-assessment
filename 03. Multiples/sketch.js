@@ -1,4 +1,4 @@
-// This was a task for my creative portfolio, the creation of arrays and loops for random artwork.
+// This was a task for my creative portfolio, the creation of arrays and loops for random artwork. Multiples
 
 let chars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"; // Hrre I'm listing characters.
 let charArray = []; // Here I'm turnoing it into an array.
