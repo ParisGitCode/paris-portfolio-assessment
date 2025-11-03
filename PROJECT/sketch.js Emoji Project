@@ -7,7 +7,7 @@ let currentMouth = 0;
 // Here I declared my variables and made an array of all the bottom halves of the nmouths,
 
 function setup() {
-  createCanvas(400, 400);
+  createCanvas(600, 400);
   petals = color(255, 0, 0);
   textAlign(CENTER, CENTER);
   textSize(40);
