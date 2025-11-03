@@ -1,1 +1,3 @@
-# paris-portfolio-assessment
+This is my creative portfolio, I started from 1 - Drawing to 4, Media.
+
+These were all skills I incorporated into my final project. In my p5.js projects, I explored a wide range of creative visual coding skills. I understand loops, but my weakness is applying them. I learned how to use variables and arrays and I fully understand how to use them and the functionality of it. Another thing I am really confident with is user engagement, so mouseClicked(). As well as random generation, like random numbers. Overall, mostly implemented movement, araays, shapes and loops into my final project which I think went well.
