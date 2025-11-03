@@ -26,6 +26,8 @@ function draw() {
   text(kitchen, 100, 100)
 }
 
+
+/*
 function draw() {
   background(320);
   circle(30,50,30)
