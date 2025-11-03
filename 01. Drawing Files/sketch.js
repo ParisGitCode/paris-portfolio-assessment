@@ -1,28 +1,20 @@
-// CREATE SQUARES
-
+// Here I made a simple emoji smiling face as my first activity task.
 function setup() {
-  createCanvas(640, 480); 
-  background(230);    
-  // noStroke();              
+  createCanvas(500, 400); // I made the canvas 500 x 400.
+  background(255);
 }
 
-function draw(){
-    fill(0); 
-    rect(0, 0, 100, 100); // x, y, w, h
+function draw() {
+  background(255); // Here the background is set.
+
+
+  fill(255, 255, 0); // This sets the colour of the emoji as yellow
+  ellipse(200, 200, 200, 200);
+
+  fill(0);
+  ellipse(170, 200, 20, 40); 
+  ellipse(230, 200, 20, 40);  // Here I'm filling in the eyes.
     
-    fill(64);
-		rect(50, 50, 100, 100); 
-
-		fill(128)
-		rect(100, 100, 100, 100);
-		
-		fill(196);
-		rect(150, 150, 200, 200);
-
-		fill(220);
-		rect(300, 300, 400, 400); 
+  arc(200, 240, 60, 30, 0, PI); // This PI gives the angle of the circle that the arc is in the direction of. It creates a smile.
 }
-
-stroke(20, 200, 200);  // r, g, b 
-strokeWeight(10);      // Width of stroke
-fill(200, 20, 200);    // r, g, b
+// 
