@@ -26,15 +26,3 @@ function draw() {
   text(kitchen, 100, 100)
 }
 
-
-/*
-function draw() {
-  background(320);
-  circle(30,50,30)
-  fill(0,255,0);
-  circle(x, y, 50);
-  fill(255,0,0);
-  textSize(30);
-  text(kitchen, 100, 100)
-}
-
