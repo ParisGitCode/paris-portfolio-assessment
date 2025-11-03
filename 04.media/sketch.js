@@ -1,3 +1,5 @@
+/*
+
 let img; 
 
 function preload() {
@@ -13,6 +15,7 @@ function draw() {
   image(img, 70, 0);
 }
 
+*/
 
 let hum; 
 let img; 
