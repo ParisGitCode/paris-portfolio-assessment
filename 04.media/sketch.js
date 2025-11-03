@@ -1,87 +1,28 @@
-/*
+// I-m creating a simple camera with a frame/
 
-let img; 
-
-function preload() {
-  img = loadImage('Antenna.jpg');
-}
-
-function setup() {
-  createCanvas(windowWidth, windowHeight);
-}
-
-function draw() {
-  background(220);
-  image(img, 70, 0);
-}
-
-*/
-let hum;
-let img;
-let capture;
+let cam;
 
 function preload() {
-  img = loadImage('Antenna.jpg');
-  hum = loadSound("humm.wav");
+// Here I loaded a bow image
+  bow = loadImage("bow.png");
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
-  capture = createCapture(VIDEO);
-  capture.size(320, 240);
-  capture.hide();
+  createCanvas(640, 480);
+  cam = createCapture(VIDEO);
+  cam.size(640, 480);
+  cam.hide();
 }
 
 function draw() {
-  image(img, 0, 0, windowWidth, 500);
+  background(255);
+  image(cam, 0, 0, width, height);
+  noFill();
+  stroke(255, 105, 180); //  I made the border hot pink, so this is how I did it.
+  strokeWeight(10);
+  rect(0, 0, width, height);
 
-  push();
-  image(capture, 50, 10, 320, 240);
-  filter(INVERT);
-  pop();
+  //  Ten I placed the image at the top center.
+  imageMode(CENTER);
+  image(bow, width / 2, 60, 100, 60)
 }
-
-function mouseClicked() {
-  if (!hum.isPlaying()) {
-    hum.loop();
-    hum.amp(0.7);
-  }
-}
-
-
-/* 
-Mouse events
-
-let select = 0;
-let size = 30;
-let rgba = [20, 20, 20, 20]; 
-
-function setup() {
-  noStroke(); 
-  createCanvas(800, 800);
-}
-
-function draw() {
-  fill(rgba);
-  ellipse(mouseX, mouseY, size, size);
-  if(select!=2){
-    size = random(10, 200);
-  }
-}
-
-function mouseClicked() {
-  
-   console.log('select: '+select); 
-  
-  rgba[select] = random(0,255); 
-  rgba[3] = random(5,50); 
-  select++; 
- 
-  if(select >= 3)
-    console.log('reset select'); 
-    select = 0; 
-  }
-  return false; 
-}
-
-*/
