@@ -35,3 +35,41 @@ function mouseClicked(){
   hum.loop();
   hum.amp(0.7); 
 }
+
+
+/* 
+Mouse events
+
+let select = 0;
+let size = 30;
+let rgba = [20, 20, 20, 20]; 
+
+function setup() {
+  noStroke(); 
+  createCanvas(800, 800);
+}
+
+function draw() {
+  fill(rgba);
+  ellipse(mouseX, mouseY, size, size);
+  if(select!=2){
+    size = random(10, 200);
+  }
+}
+
+function mouseClicked() {
+  
+   console.log('select: '+select); 
+  
+  rgba[select] = random(0,255); 
+  rgba[3] = random(5,50); 
+  select++; 
+ 
+  if(select >= 3)
+    console.log('reset select'); 
+    select = 0; 
+  }
+  return false; 
+}
+
+*/
