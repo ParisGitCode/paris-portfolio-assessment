@@ -1,0 +1,43 @@
+// What I'll be making is a flower with petsals that change when clicked, and placing a face on the flower to make different facial expressions.
+
+let petals;
+let mouthOptions = ["  o  ", "  _  ", "  ᵕ  ", "ᴼ"];
+let currentMouth = 0;
+
+// Here I declared my variables and made an array of all the bottom halves of the nmouths,
+
+function setup() {
+  createCanvas(400, 400);
+  petals = color(255, 0, 0);
+  textAlign(CENTER, CENTER);
+  textSize(40);
+}
+
+// At this point I centered the drawing by positioning it at the halfway point of the canvas.
+function draw() {
+  background(240);
+  translate(width / 2, height / 2);
+
+  // Here is where I filled in the petals and positioned them. I originally tried to do this in a for loop and I think it would've been quicker that wat but I wasn't sure how.
+  fill(petals);
+  ellipse(60, 0, 60, 70);   
+  ellipse(-60, 0, 60, 70); 
+  ellipse(30, 50, 60, 60);   
+  ellipse(-30, 50, 60, 60);  
+  ellipse(30, -50, 60, 60);  
+  ellipse(-30, -50, 60, 60); 
+
+  //H Here I'm filing in the flower and changing the position.
+  fill(255);
+  ellipse(0, 0, 100, 100);
+
+  // Here I have fully created the face, specifically the eyes. 
+  fill(0);
+  text("O   O", 0, -20); // This minus symbol is something I learnt from the p5js website. This moves the eyes up.
+  text(mouthOptions[currentMouth], 0, 20);
+}
+
+function mousePressed() {
+  petals = color(random(255), random(255), random(255));
+  currentMouth = (currentMouth + 1) % mouthOptions.length;
+}
