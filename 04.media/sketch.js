@@ -16,27 +16,36 @@ function draw() {
 }
 
 */
+let hum;
+let img;
+let capture;
 
-let hum; 
-let img; 
-function preload(){
+function preload() {
   img = loadImage('Antenna.jpg');
-    hum = loadSound("humm.wav");
+  hum = loadSound("humm.wav");
 }
+
 function setup() {
   createCanvas(windowWidth, windowHeight);
   capture = createCapture(VIDEO);
   capture.size(320, 240);
   capture.hide();
 }
+
 function draw() {
   image(img, 0, 0, windowWidth, 500);
+
+  push();
   image(capture, 50, 10, 320, 240);
-  filter(INVERT); 
+  filter(INVERT);
+  pop();
 }
-function mouseClicked(){
-  hum.loop();
-  hum.amp(0.7); 
+
+function mouseClicked() {
+  if (!hum.isPlaying()) {
+    hum.loop();
+    hum.amp(0.7);
+  }
 }
 
 
