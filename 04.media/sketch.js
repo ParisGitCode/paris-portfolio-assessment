@@ -1,4 +1,4 @@
-// I-m creating a simple camera with a frame/
+// Here I'm creating a simple camera with a frame as my piece for Media.
 
 let cam;
 
