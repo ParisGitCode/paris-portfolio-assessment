@@ -17,4 +17,4 @@ function draw() {
     
   arc(200, 240, 60, 30, 0, PI); // This PI gives the angle of the circle that the arc is in the direction of. It creates a smile.
 }
-// 
+// Overall for my first task this was pretty simple, the PI in the arc was something I had to research as I was unsure of why it was not working in the way I wanted it to.
